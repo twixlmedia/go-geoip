@@ -25,7 +25,7 @@ func New() webserver.App {
 
 	db := geoip.NewDatabase(dbPath)
 
-	interval := 1 * time.Hour
+	interval := 6 * time.Hour
 	if os.Getenv("DEBUG") == "1" {
 		interval = 1 * time.Minute
 	}
